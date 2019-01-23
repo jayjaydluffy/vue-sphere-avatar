@@ -1,13 +1,22 @@
 {
   "name": "vue-sphere-avatar",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.1",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "build-lib": "vue-cli-service build --target lib --name vue-sphere-avatar ./src/components/index.js"
   },
+  "main": "./dist/vue-sphere-avatar.common.js",
+  "files": [
+    "dist/*",
+    "src/*",
+    "*.json",
+    "*.js"
+  ],
   "dependencies": {
+    "fitty": "^2.2.6",
+    "tinycolor2": "^1.4.1",
     "vue": "^2.5.21"
   },
   "devDependencies": {

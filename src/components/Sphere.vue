@@ -85,7 +85,7 @@ export default {
     }
 }
 </script>
-<style scoped>
+<style>
     .sphere-avatar--dark {
         color: #FFF;
     }

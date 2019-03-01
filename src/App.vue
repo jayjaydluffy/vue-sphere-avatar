@@ -7,6 +7,7 @@
       <sphere-avatar :name="'San Antonio Spursy'" :initials="'SAS'"></sphere-avatar>
       <sphere-avatar :initials="'InT'" :color="'redorange'"></sphere-avatar>
       <sphere-avatar :initials="'PFL'" :color="'#f0f0f688'"></sphere-avatar>
+      <sphere-avatar :name="'     0934258ng fj01    '" :size="20" :maxFontSize="14"></sphere-avatar>
     </div>
   </div>
 </template>

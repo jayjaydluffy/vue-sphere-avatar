@@ -1,5 +1,5 @@
 export const getInitials = str => {
-    if (str === undefined || str.length === 0) {
+    if (str === undefined || str === null || str.length === 0) {
         return '?';
     }
     
@@ -13,7 +13,7 @@ export const getInitials = str => {
 export const hashCode = str => {
     var hash = 0;
     for (var i = 0; i < str.length; i++) {
-       hash = str.charCodeAt(i) + ((hash << 5) - hash);
+        hash = str.charCodeAt(i) + ((hash << 5) - hash);
     }
     return hash;
 }
@@ -26,4 +26,12 @@ export const intToRGB = i => {
     return "00000".substring(0, 6 - c.length) + c;
 }
 
-export const getColorByString = str => intToRGB(hashCode(str))
+export const getColorByString = str => {
+    let newStr = str;
+
+    if (str === undefined || str.length === 0) {
+        newStr = '?';
+    }
+
+    intToRGB(hashCode(newStr))
+}

@@ -33,5 +33,5 @@ export const getColorByString = str => {
         newStr = '?';
     }
 
-    intToRGB(hashCode(newStr))
+    return intToRGB(hashCode(newStr))
 }

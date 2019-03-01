@@ -2,8 +2,11 @@ export const getInitials = str => {
     if (str === undefined || str.length === 0) {
         return '?';
     }
-
+    
     const matches = str.match(/\b(\w)/g);
+    if (!matches) {
+        return '?';
+    }
     return matches.join('').slice(0,3);
 }
 
